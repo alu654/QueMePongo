@@ -12,7 +12,6 @@ public enum TipoPrenda {
   COLLAR(Categoria.ACCESORIOS),
   ARO(Categoria.ACCESORIOS);
 
-  public Categoria tipoPrenda;
   List<Material> materialesDisponibles;
 private Categoria categoria;
 private TipoPrenda(Categoria categoria){

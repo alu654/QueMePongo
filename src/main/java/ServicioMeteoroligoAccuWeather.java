@@ -30,14 +30,6 @@ public class ServicioMeteoroligoAccuWeather {
     return (temperatura-32) * 5/9;
   }
 
-  public String getDireccion(String direccion){
-    return this.direccion = direccion;
-  }
-
-  public LocalDateTime getProxtraExpiracion() {
-    return proximaExpiracion;
-  }
-
 
 
   }
