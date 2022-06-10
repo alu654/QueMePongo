@@ -1,24 +1,29 @@
 
 public class Atuendo {
-  Prenda prendasParteArriba;
-  Prenda prendaParteAbajo;
+
+
+  public Prenda prendaSuperior;
+  public Prenda prendaInferior;
   Prenda calzado;
   Prenda accesorios;
 
-  public Prenda superior;
-  public Prenda inferior;
-
+  public Atuendo(Prenda prendaSuperior, Prenda prendaInferior, Prenda calzado, Prenda accesorio) {
+    this.prendaSuperior = prendaSuperior;
+    this.prendaInferior = prendaInferior;
+    this.calzado = calzado;
+    this.accesorios = accesorio;
+  }
 
   public void setPrendaParteSuperior(Prenda prendasParteArriba) {
-    this.prendasParteArriba = prendasParteArriba;
+    this.prendaSuperior = prendasParteArriba;
   }
 
   public Prenda getPrendaParteInferior() {
-    return prendaParteAbajo;
+    return prendaInferior;
   }
 
   public void setPrendaParteAbajo(Prenda prendaParteAbajo) {
-    this.prendaParteAbajo = prendaParteAbajo;
+    this.prendaInferior = prendaParteAbajo;
   }
 
 

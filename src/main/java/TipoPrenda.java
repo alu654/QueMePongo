@@ -1,22 +1,20 @@
 import java.util.List;
 
 public enum TipoPrenda {
-  Remera(Categoria.SUPERIOR),
-  CamisaMangaCorta(Categoria.SUPERIOR),
-  CamisaMangaLarga(Categoria.SUPERIOR),
-  PantalonCorto(Categoria.INFERIOR),
-  PantalonLargo(Categoria.INFERIOR),
+  Remera(Categoria.PARTE_SUPERIOR),
+  CamisaMangaCorta(Categoria.PARTE_SUPERIOR),
+  CamisaMangaLarga(Categoria.PARTE_SUPERIOR),
+  PantalonCorto(Categoria.PARTE_INFERIOR),
+  PantalonLargo(Categoria.PARTE_INFERIOR),
   Zapatos(Categoria.CALZADO),
   OJOTAS(Categoria.CALZADO),
   ANILLO(Categoria.ACCESORIOS),
   COLLAR(Categoria.ACCESORIOS),
   ARO(Categoria.ACCESORIOS);
 
+  public Categoria tipoPrenda;
   List<Material> materialesDisponibles;
-
-
 private Categoria categoria;
-
 private TipoPrenda(Categoria categoria){
   this.categoria= categoria;
 }

@@ -9,6 +9,7 @@ public class TestPrenda {
   public void initialize() {
     color = new Color(25, 70, 125);
   }
+
   @Test
   public  void TieneColorSecundarioPrenda(){
     assertNull(prendaSinColorSecundario().colorSecundario);
@@ -18,4 +19,5 @@ public class TestPrenda {
   public Prenda prendaSinColorSecundario(){
     return new Prenda(TipoPrenda.PantalonCorto,Material.ALGODON, color , null );
   }
+
 }

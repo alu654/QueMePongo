@@ -4,6 +4,8 @@ public class Prenda {
   Material material;
   Color colorPrimario;
   Color colorSecundario;
+  Double temperaturaMaxima;
+  Categoria categoria;
 
   public Prenda(TipoPrenda tipo, Material material, Color colorPrimario, Color colorSecundario ) {
     this.tipo = tipo;
@@ -30,6 +32,12 @@ public class Prenda {
   public void setTipo(TipoPrenda tipo) {
     this.tipo = tipo;
   }
+  public TipoPrenda getTipoDePrenda() {
+    return tipo;
+  }
+  public Categoria getCategoria() {
+    return categoria;
+  }
 
   public void setMaterial(Material material) {
     this.material = material;
@@ -53,6 +61,9 @@ public class Prenda {
        throw new Exception("Uno o mas campos esta erroneo");
     }
 
+  }
+  public boolean aptaParaTemperaturaEspecifica(Double temperatura){
+    return temperatura < temperaturaMaxima;
   }
 
 }

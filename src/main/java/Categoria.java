@@ -1,6 +1,6 @@
 public enum Categoria {
-  SUPERIOR,
-  INFERIOR,
+  PARTE_SUPERIOR,
+  PARTE_INFERIOR,
   CALZADO,
   ACCESORIOS;
 }
