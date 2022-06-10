@@ -41,16 +41,22 @@ public class Guardarropas {
     Collections.addAll(this.getPrendas(),prendas);
   }
 
-  public List<Prenda> getSugerenciasAgregar() {
-    return sugerenciasAgregar;
-  }
-
   public List<Prenda> getSugerenciasEliminar() {
     return sugerenciasEliminar;
   }
 
   public void Guardarropas(Guardarropas guardarropas){
     propuesta.aceptarPropuesta(guardarropas);
+  }
+  public List<Prenda> getSugerenciasAgregar() {
+    return sugerenciasAgregar;
+  }
+
+  public String prendasAAgregar(){
+    StringBuilder texto = new StringBuilder("Selecciona la prenda a agregar de las recomendadas por otros usuarios: \n ");
+    List<Prenda> listaAAgregar = this.getSugerenciasAgregar();
+    texto.append(listaAAgregar);
+    return texto.toString();
   }
 
 }

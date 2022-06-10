@@ -28,20 +28,9 @@ public class Usuario {
   }
 
 
-  public List<Prenda> getSugerenciasAgregar() {
-    return sugerenciasAgregar;
-  }
   public List<Prenda> getSugerenciasEliminar(){
     return sugerenciasEliminar;
   }
-
-  public String listarPrendasAAgregar(){
-    StringBuilder texto = new StringBuilder("Selecciona la prenda a agregar de las recomendadas por otros usuarios: \n ");
-    List<Prenda> listaAAgregar = this.getSugerenciasAgregar();
-    texto.append(listaAAgregar);
-    return texto.toString();
-  }
-
 
   public void eliminarPrenda(Prenda prenda){
     if (!this.estaEnElGuardarropa(prenda)){
