@@ -15,10 +15,6 @@ public class SugerenciasClimaticas {
   }
 
   private Prenda elegirUnaDe(List<Prenda> prendas, Categoria categoria) {
-    return prendas.
-        stream().
-        filter(prenda -> prenda.getCategoria() == categoria).
-        collect(Collectors.toList()).
-        get(0);
+    return prendas.stream().filter(prenda -> prenda.getCategoria() == categoria).collect(Collectors.toList()).get(0);
   }
 }
