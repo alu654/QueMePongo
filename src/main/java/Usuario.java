@@ -6,11 +6,9 @@ import static java.util.Objects.requireNonNull;
 
 public class Usuario {
   private List<Guardarropas> guardarropas;
-  private List<PropuestaAceptar> propuestasAceptadas;
-  private List<PropuestaAceptar> propuestasPendientes;
   private List<Prenda> sugerenciasEliminar = new ArrayList<>();
-  private List<Prenda> sugerenciasAgregar = new ArrayList<>();
   private List<Prenda> prendas = new ArrayList<>();
+
 
 
 
@@ -46,11 +44,5 @@ public class Usuario {
     return this.getPrendas().contains(prenda);
   }
 
-  public String listarPrendasAEliminar(){
-    StringBuilder texto = new StringBuilder("Selecciona la prenda que quieras eliminar de las recomendadas por otros usuarios: \n ");
-    List<Prenda> listaAEliminar = this.getSugerenciasEliminar();
-    texto.append(listaAEliminar);
-    return texto.toString();
-  }
 
 }

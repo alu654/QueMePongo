@@ -3,8 +3,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Guardarropas {
-  private Prenda prenda;
-  private Guardarropas guardarropa;
+
+
   List<Prenda> prendas;
   private List<Usuario> duenios = new ArrayList<>();
   private List<Prenda> sugerenciasAgregar = new ArrayList<>();
@@ -12,9 +12,7 @@ public class Guardarropas {
   private PropuestaAceptar propuesta;
 
 
-  public Guardarropas() {
-    this.prendas = new ArrayList<>();
-  }
+
 
   public List<Prenda> getPrendas() {
     return prendas;
@@ -28,10 +26,6 @@ public class Guardarropas {
     prendas.remove(prenda);
   }
 
-
-  public void Guardarropa(Usuario duenio) {
-    this.duenios.add(duenio);
-  }
 
   public Guardarropas(List<Usuario> duenios) {
     this.duenios = duenios;
@@ -58,5 +52,13 @@ public class Guardarropas {
     texto.append(listaAAgregar);
     return texto.toString();
   }
+
+  public String listarPrendasAEliminar(){
+    StringBuilder texto = new StringBuilder("Selecciona la prenda que quieras eliminar de las recomendadas por otros usuarios: \n ");
+    List<Prenda> listaAEliminar = this.getSugerenciasEliminar();
+    texto.append(listaAEliminar);
+    return texto.toString();
+  }
+
 
 }
